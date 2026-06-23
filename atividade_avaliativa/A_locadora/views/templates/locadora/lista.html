@@ -10,21 +10,22 @@
     <thead>
         <tr>
             <th>Cliente</th>
-            <th>Veículo</th>
-            <th>Início</th>
-            <th>Fim</th>
-            <th>Total</th>
+            <th>Placa do Veículo</th>
+            <th>Data de Início</th>
+            <th>Data de Fim</th>
+            <th>Valor</th>
         </tr>
     </thead>
     <tbody>
+        {% for locacao in locacoes %}
         <tr>
-            <!-- TODO ALUNO: {{ locacao.cliente.nome }}, placa, datas, valor -->
-            <td>___________</td>
-            <td>___________</td>
-            <td>___________</td>
-            <td>___________</td>
-            <td>___________</td>
+            <td>{{ locacao.cliente.nome }}</td>
+            <td>{{ locacao.veiculo.placa }}</td>
+            <td>{{ locacao.data_inicio }}</td>
+            <td>{{ locacao.data_fim }}</td>
+            <td>{{ locacao.valor }}</td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
